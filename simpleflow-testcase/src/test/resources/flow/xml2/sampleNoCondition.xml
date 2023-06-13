@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<simpleFlow flowName="testProcessNoCondition" flowDesc="测试流程" xmlns="http://simple-flow.hunk.com"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://simple-flow.hunk.com simple-flow-xml2.xsd">
+    <nodes>
+        <start beanId="flowNoConditionOne" nodeDesc="流程1" preEvent=""/>
+        <node beanId="flowNoConditionTwo" nodeDesc="流程2"/>
+        <end beanId="flowNoConditionThree" nodeDesc="流程3"/>
+    </nodes>
+
+    <lines>
+        <line conditionDesc="流程1" from="flowNoConditionOne" to="flowNoConditionTwo"/>
+        <line conditionDesc="流程1" from="flowNoConditionTwo" to="flowNoConditionThree"/>
+    </lines>
+</simpleFlow>

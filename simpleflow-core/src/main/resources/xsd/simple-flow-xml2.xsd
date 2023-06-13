@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://simple-flow.hunk.com"
+           xmlns="http://simple-flow.hunk.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="line">
+        <xs:complexType>
+            <xs:attribute name="conditionDesc" type="xs:string"/>
+            <xs:attribute name="condition" type="xs:string"/>
+            <xs:attribute name="from" use="required" type="xs:string"/>
+            <xs:attribute name="to" use="required" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="lines">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="line" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="start">
+        <xs:complexType>
+            <xs:attribute name="beanId" use="required" type="xs:string"/>
+            <xs:attribute name="nodeDesc" type="xs:string"/>
+            <xs:attribute name="preEvent" type="xs:string"/>
+            <xs:attribute name="afterEvent" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="node">
+        <xs:complexType>
+            <xs:attribute name="beanId" use="required" type="xs:string"/>
+            <xs:attribute name="nodeDesc" type="xs:string"/>
+            <xs:attribute name="preEvent" type="xs:string"/>
+            <xs:attribute name="afterEvent" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="end">
+        <xs:complexType>
+            <xs:attribute name="beanId" use="required" type="xs:string"/>
+            <xs:attribute name="nodeDesc" type="xs:string"/>
+            <xs:attribute name="preEvent" type="xs:string"/>
+            <xs:attribute name="afterEvent" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nodes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="start" maxOccurs="unbounded"/>
+                <xs:element ref="node" maxOccurs="unbounded"/>
+                <xs:element ref="end" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="simpleFlow">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nodes"/>
+                <xs:element ref="lines"/>
+            </xs:sequence>
+            <xs:attribute name="flowName" use="required" type="xs:string"/>
+            <xs:attribute name="flowDesc" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

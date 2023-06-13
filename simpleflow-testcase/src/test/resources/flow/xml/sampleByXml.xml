@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<simpleFlow flowName="testProcess" flowDesc="测试流程" xmlns="http://simple-flow.hunk.com"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://simple-flow.hunk.com simple-flow-xml.xsd">
+    <nodes>
+        <start beanId="checkFlow" nodeDesc="参数校验">
+            <choose>
+                <when condition="${ paramOne} eq 'true' " to="flowOne" conditionDesc="流程1"/>
+                <when condition=" empty (${paramOne}) or ${paramOne} ne 'true' " to="flowTwo" conditionDesc="流程2"/>
+            </choose>
+        </start>
+        <node beanId="flowOne" nodeDesc="流程1">
+            <choose>
+                <when condition="${ paramTwo} eq '1'" to="flowThree" conditionDesc="流程3"/>
+                <when condition="${ paramTwo} eq '2'" to="flowFour" conditionDesc="流程4"/>
+            </choose>
+        </node>
+        <node beanId="flowTwo" nodeDesc="流程2">
+            <choose>
+                <when condition="${ paramTwo} eq '1' " to="flowThree" conditionDesc="流程3"/>
+                <when condition="${ paramTwo} eq '2' " to="flowFour" conditionDesc="流程4"/>
+            </choose>
+        </node>
+        <node beanId="flowThree" nodeDesc="流程3">
+            <choose>
+                <when condition="${ paramOne} eq 'true' " to="flowEnd" conditionDesc="流程结束"/>
+            </choose>
+        </node>
+        <node beanId="flowFour" nodeDesc="流程4">
+            <choose>
+                <when condition="${ paramOne} eq 'true' " to="flowEnd" conditionDesc="流程结束"/>
+            </choose>
+        </node>
+        <end beanId="flowEnd" nodeDesc="流程结束"/>
+    </nodes>
+</simpleFlow>
