@@ -15,11 +15,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.hunk</groupId>
-            <artifactId>simpleflow-core</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -31,6 +26,10 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
         </dependency>
     </dependencies>
 

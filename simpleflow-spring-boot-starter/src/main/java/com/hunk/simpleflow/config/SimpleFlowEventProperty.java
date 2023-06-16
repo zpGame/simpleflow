@@ -1,68 +1,38 @@
-package com.hunk.simpleflow.property;
+package com.hunk.simpleflow.config;
 
+import cn.hutool.core.util.StrUtil;
 import com.hunk.simpleflow.enums.EventEnum;
-import com.hunk.simpleflow.enums.FileTypeEnum;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.bind.DefaultValue;
+
+import java.util.Optional;
 
 /**
- * Created on 2023/4/24.
+ * Created on 2023/6/16.
  *
  * @author norbit
  *     <p>
  */
-public class SimpleFlowConfig {
-
-    /** 流程定义资源地址 */
-    private String ruleSource;
-
-    /** 是否启动初始化 */
-    private boolean startInit;
-
-    private FileTypeEnum fileType;
+@ConfigurationProperties(prefix = "simple.flow.event")
+public class SimpleFlowEventProperty {
 
     private EventEnum eventEnum;
 
     /** 异步线程名称 */
-    private String nameFormat;
+    private String nameFormat = "asyncEventBus";
 
     /** 核心池大小 */
-    private int corePoolSize;
+    private int corePoolSize = 6;
 
     /** 最大池大小 */
-    private int maximumPoolSize;
+    private int maximumPoolSize = 10;
 
     /** 存活时间，单位秒 */
-    private long keepAliveTime;
+    private long keepAliveTime = 60L;
 
     /** 容量 */
-    private int capacity;
-
-    public String getRuleSource() {
-        return ruleSource;
-    }
-
-    public void setRuleSource(String ruleSource) {
-        this.ruleSource = ruleSource;
-    }
-
-    public boolean isStartInit() {
-        return startInit;
-    }
-
-    public void setStartInit(boolean startInit) {
-        this.startInit = startInit;
-    }
-
-    public FileTypeEnum getFileType() {
-        return fileType;
-    }
-
-    public String getFileTypeToStr() {
-        return fileType.getSuffixName();
-    }
-
-    public void setFileType(FileTypeEnum fileType) {
-        this.fileType = fileType;
-    }
+    private int capacity = 2048;
 
     public EventEnum getEventEnum() {
         return eventEnum;

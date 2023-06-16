@@ -36,18 +36,15 @@ public class SpringAware implements ApplicationContextAware {
     }
 
     public static <T> T getBean(String name) {
-        T t = CastUtils.cast(applicationContext.getBean(name));
-        return t;
+        return CastUtils.cast(applicationContext.getBean(name));
     }
 
     public static  <T> T getBean(Class<T> clazz) {
-        T t = applicationContext.getBean(clazz);
-        return t;
+        return applicationContext.getBean(clazz);
     }
 
     private <T> T getBean(String beanName, Class<T> clazz) {
-        T t = applicationContext.getBean(beanName, clazz);
-        return t;
+        return applicationContext.getBean(beanName, clazz);
     }
 
     public <T> T registerBean(String beanName, Class<T> c) {

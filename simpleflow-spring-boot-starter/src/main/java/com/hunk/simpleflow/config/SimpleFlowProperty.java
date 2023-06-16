@@ -19,7 +19,7 @@ public class SimpleFlowProperty {
     /** 是否启动初始化 */
     private boolean startInit;
 
-    private FileTypeEnum fileType;
+    private FileTypeEnum fileType = FileTypeEnum.XML;
 
     public String getRuleSource() {
         return ruleSource;
@@ -38,7 +38,7 @@ public class SimpleFlowProperty {
     }
 
     public FileTypeEnum getFileType() {
-        return null == fileType ? FileTypeEnum.XML : fileType;
+        return fileType;
     }
 
     public void setFileType(FileTypeEnum fileType) {

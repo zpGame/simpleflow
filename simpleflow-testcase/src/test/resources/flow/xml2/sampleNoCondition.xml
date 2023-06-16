@@ -3,7 +3,7 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://simple-flow.hunk.com simple-flow-xml2.xsd">
     <nodes>
-        <start beanId="flowNoConditionOne" nodeDesc="流程1"/>
+        <start beanId="flowNoConditionOne" nodeDesc="流程1" preEvent="outputTest" afterEvent="outputTest"/>
         <node beanId="flowNoConditionTwo" nodeDesc="流程2"/>
         <end beanId="flowNoConditionThree" nodeDesc="流程3"/>
     </nodes>

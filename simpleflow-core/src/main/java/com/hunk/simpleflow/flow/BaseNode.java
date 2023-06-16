@@ -22,17 +22,25 @@ public abstract class BaseNode {
     }
 
     public void execute(Node node) {
-        if (node.isExecutePreEvent()) beforeEvent();
+        beforeEvent(node);
         process();
-        if (node.isExecuteAfterEvent()) afterEvent();
+        afterEvent(node);
     }
 
-    public void beforeEvent() {
-        SpringAware.getBean(NodeEvent.class).preEvent();
+    public void beforeEvent(Node node) {
+        if (!node.isExecutePreEvent()) {
+            return;
+        }
+        NodeEvent nodeEvent = SpringAware.getBean(node.getPreEvent());
+        nodeEvent.doEvent();
     }
 
-    public void afterEvent() {
-        SpringAware.getBean(NodeEvent.class).afterEvent();
+    public void afterEvent(Node node) {
+        if (!node.isExecuteAfterEvent()) {
+            return;
+        }
+        NodeEvent nodeEvent = SpringAware.getBean(node.getAfterEvent());
+        nodeEvent.doEvent();
     }
 
     /** 子类实现类，用于业务 */

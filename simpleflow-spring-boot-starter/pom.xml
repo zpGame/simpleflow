@@ -24,7 +24,7 @@
         </dependency>
         <dependency>
             <groupId>com.hunk</groupId>
-            <artifactId>simpleflow-event</artifactId>
+            <artifactId>simpleflow-core</artifactId>
             <version>${revision}</version>
         </dependency>
     </dependencies>

@@ -1,4 +1,4 @@
-package com.hunk.simpleflow.error;
+package com.hunk.simpleflow.event.error;
 
 /**
  * Created on 2023/5/19.

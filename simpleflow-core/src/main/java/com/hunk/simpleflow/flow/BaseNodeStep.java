@@ -3,6 +3,7 @@ package com.hunk.simpleflow.flow;
 import com.hunk.simpleflow.consts.Constant;
 import com.hunk.simpleflow.error.FlowRuntimeException;
 import com.hunk.simpleflow.flow.node.Node;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created on 2023/6/12.
@@ -10,6 +11,7 @@ import com.hunk.simpleflow.flow.node.Node;
  * @author norbit
  *     <p>
  */
+@Slf4j
 public abstract class BaseNodeStep<T extends Node> {
 
     private final T node;
@@ -35,6 +37,7 @@ public abstract class BaseNodeStep<T extends Node> {
         try {
             aresService.execute(node);
         } catch (Exception e) {
+            log.error("执行节点异常", e);
             throw new FlowRuntimeException("Flow execution exception !", e);
         }
         return doCondition(ctx);

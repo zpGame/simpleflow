@@ -19,5 +19,5 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(
         classes = BaseServiceTest.class,
         webEnvironment = SpringBootTest.WebEnvironment.NONE)
-@ComponentScan({"com.hunk.simpleflow.test.flow"})
+@ComponentScan({"com.hunk.simpleflow.test"})
 public abstract class BaseServiceTest {}

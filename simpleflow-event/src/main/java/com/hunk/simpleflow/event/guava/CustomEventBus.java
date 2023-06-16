@@ -1,6 +1,7 @@
 package com.hunk.simpleflow.event.guava;
 
-import com.hunk.simpleflow.error.CustomEventException;
+import cn.hutool.core.map.MapUtil;
+import com.hunk.simpleflow.event.error.CustomEventException;
 
 import java.util.Map;
 
@@ -19,7 +20,11 @@ public interface CustomEventBus {
      * @return map
      * @throws CustomEventException 发布异常
      */
-    Map<String, Object> publish(CustomEvent event) throws CustomEventException;
+    default Map<String, Object> publish(CustomEvent event) throws CustomEventException {
+        return MapUtil.empty();
+    }
+
+    default void asyncPublish(CustomEvent event) throws CustomEventException {}
 
     /**
      * 注册eventBus

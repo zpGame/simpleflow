@@ -1,7 +1,7 @@
 package com.hunk.simpleflow.event.guava;
 
 import com.google.common.eventbus.EventBus;
-import com.hunk.simpleflow.error.CustomEventException;
+import com.hunk.simpleflow.event.error.CustomEventException;
 
 import java.util.Map;
 

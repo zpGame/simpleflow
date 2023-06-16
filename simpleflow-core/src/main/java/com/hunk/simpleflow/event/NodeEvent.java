@@ -7,7 +7,6 @@ package com.hunk.simpleflow.event;
  */
 public interface NodeEvent {
 
-    void preEvent();
+    void doEvent();
 
-    void afterEvent();
 }
