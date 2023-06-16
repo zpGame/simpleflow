@@ -3,7 +3,7 @@ package com.hunk.simpleflow.flow;
 /**
  * Created on 2023/4/24.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>
  */
 public interface IFlowDispatch {

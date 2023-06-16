@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 /**
  * Created on 2023/4/25.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>文件类型
  */
 public enum FileTypeEnum {

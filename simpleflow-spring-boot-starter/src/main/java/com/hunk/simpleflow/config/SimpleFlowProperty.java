@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * Created on 2023/4/22.
  *
- * @author hunk
+ * @author norbit
  *     <p>
  */
 @ConfigurationProperties(prefix = "simple.flow")

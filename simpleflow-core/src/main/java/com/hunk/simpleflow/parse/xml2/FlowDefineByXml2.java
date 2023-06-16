@@ -9,7 +9,7 @@ import com.hunk.simpleflow.flow.node.StartNode;
 /**
  * Created on 2023/4/24.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>根据xml2文件解析
  */
 public class FlowDefineByXml2 implements IFlowDefine {

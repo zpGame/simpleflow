@@ -6,7 +6,7 @@ import org.springframework.beans.factory.InitializingBean;
 /**
  * Created on 2023/4/24.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>执行器初始化类
  */
 public class SimpleFlowInit implements InitializingBean {

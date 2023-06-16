@@ -8,7 +8,7 @@ import com.hunk.simpleflow.utils.ThreadLocalUtil;
 /**
  * Created on 2023/4/24.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>可编排原子服务
  */
 public abstract class BaseNode {

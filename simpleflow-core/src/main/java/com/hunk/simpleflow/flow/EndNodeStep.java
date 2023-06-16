@@ -6,7 +6,7 @@ import com.hunk.simpleflow.flow.node.EndNode;
 /**
  * Created on 2023/6/12.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>
  */
 public class EndNodeStep extends BaseNodeStep<EndNode> {

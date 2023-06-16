@@ -15,7 +15,7 @@ import java.util.Set;
 /**
  * Created on 2023/4/26.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>条件对象
  */
 public class Condition {

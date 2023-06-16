@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 /**
  * Created on 2023/5/18.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>增加stream的调用
  */
 public final class Optional<T> {

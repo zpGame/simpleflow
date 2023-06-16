@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created on 2023/4/27.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>数据总线
  */
 public interface IContext extends Serializable {

@@ -5,7 +5,7 @@ import com.hunk.simpleflow.flow.*;
 /**
  * Created on 2023/4/27.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>根据json文件解析
  */
 public class FlowDefineByJson implements IFlowDefine {

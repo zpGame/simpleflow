@@ -2,7 +2,7 @@ package com.hunk.simpleflow.flow;
 /**
  * Created on 2023/4/25.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p> 流程定义加载器
  */
 public interface IFlowDefine {

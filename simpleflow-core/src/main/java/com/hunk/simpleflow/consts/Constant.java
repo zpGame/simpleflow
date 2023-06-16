@@ -3,7 +3,7 @@ package com.hunk.simpleflow.consts;
 /**
  * Created on 2023/4/25.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>静态变量
  */
 public class Constant {

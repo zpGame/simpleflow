@@ -5,7 +5,7 @@ import com.hunk.simpleflow.event.guava.CustomEvent;
 /**
  * Created on 2023/5/22.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>
  */
 public class OutputEvent extends CustomEvent {

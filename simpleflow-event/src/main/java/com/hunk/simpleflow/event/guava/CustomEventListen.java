@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * Created on 2023/5/19.
  *
- * @author hunk
+ * @author norbit
  *     <p>
  */
 public interface CustomEventListen<E> {

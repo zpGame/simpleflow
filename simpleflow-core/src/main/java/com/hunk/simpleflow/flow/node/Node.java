@@ -11,7 +11,7 @@ import lombok.ToString;
 /**
  * Created on 2023/6/2.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>节点基础对象
  */
 @Getter

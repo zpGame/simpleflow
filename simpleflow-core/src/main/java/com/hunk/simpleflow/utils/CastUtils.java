@@ -2,7 +2,7 @@ package com.hunk.simpleflow.utils;
 /**
  * Created on 2023/5/11.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>object to bean
  */
 public interface CastUtils {

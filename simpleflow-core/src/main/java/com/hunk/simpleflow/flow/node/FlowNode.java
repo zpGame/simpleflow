@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created on 2023/4/27.
  *
- * @author YCKJ4297
+ * @author norbit
  *     <p>flow 节点对象
  */
 @Getter
