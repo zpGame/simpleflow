@@ -2,6 +2,7 @@ package com.hunk.simpleflow.test.core;
 
 import cn.hutool.core.util.StrUtil;
 
+import com.hunk.simpleflow.flow.ConditionContext;
 import com.hunk.simpleflow.flow.node.Condition;
 import org.junit.Test;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
@@ -20,6 +21,8 @@ public class ConditionTest {
     public void condition() {
         String condition = "empty (${ is_condition}) or ${is_condition} ne 'true'";
         Condition of = Condition.of(condition);
+        System.out.println(of);
+        System.out.println(of.check(ConditionContext.of()));
         System.out.println(of);
     }
 
