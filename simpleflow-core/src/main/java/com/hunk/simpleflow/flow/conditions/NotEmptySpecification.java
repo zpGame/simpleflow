@@ -3,15 +3,16 @@ package com.hunk.simpleflow.flow.conditions;
 import cn.hutool.core.util.StrUtil;
 
 /**
- * Created on 2023/7/28.
+ * Created on 2023/7/31.
  *
  * @author norbit
  *     <p>
  */
-public class EmptySpecification extends AbstractSpecification<ConditionObject> {
+public class NotEmptySpecification extends AbstractSpecification<ConditionObject> {
 
     @Override
     public boolean isSatisfiedBy(ConditionObject condition) {
-        return StrUtil.isBlank(condition.getSource());
+        return StrUtil.isNotBlank(condition.getSource());
     }
+
 }

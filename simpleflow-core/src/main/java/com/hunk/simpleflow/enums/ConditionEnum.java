@@ -2,6 +2,8 @@ package com.hunk.simpleflow.enums;
 
 import lombok.Getter;
 
+import java.util.Arrays;
+
 /**
  * Created on 2023/7/28.
  *
@@ -10,6 +12,9 @@ import lombok.Getter;
  */
 @Getter
 public enum ConditionEnum {
+
+    empty("empty"),
+    NotEmpty("notEmpty"),
     lt("<"),
     gt(">"),
     le("<="),
@@ -26,5 +31,12 @@ public enum ConditionEnum {
 
     ConditionEnum(String symbol) {
         this.symbol = symbol;
+    }
+
+    public static ConditionEnum getTypeByName(String symbol) {
+        return Arrays.stream(ConditionEnum.values())
+                .filter(o -> o.name().equals(symbol))
+                .findFirst()
+                .orElse(null);
     }
 }

@@ -26,7 +26,11 @@ public class Constant {
 
     public static final String EMPTY_CHAR = "empty";
 
+    public static final String NOT_EMPTY_CHAR = "NotEmpty";
+
     public static final int EMPTY_CHAR_LENGTH = EMPTY_CHAR.length();
+
+    public static final int NOT_EMPTY_CHAR_LENGTH = NOT_EMPTY_CHAR.length();
 
     public static final String JUDGMENT = "T(cn.hutool.core.util.StrUtil).isBlank";
 
