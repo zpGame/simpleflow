@@ -6,7 +6,7 @@ import com.hunk.simpleflow.event.guava.DefaultCustomEventBus;
 
 import org.springframework.boot.test.context.TestComponent;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 /**
  * Created on 2023/6/16.

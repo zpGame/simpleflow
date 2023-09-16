@@ -4,14 +4,15 @@ import com.hunk.simpleflow.BaseServiceTest;
 import com.hunk.simpleflow.flow.ConditionContext;
 import com.hunk.simpleflow.flow.FlowResponse;
 import com.hunk.simpleflow.flow.SimpleFlowExecutor;
-
 import com.hunk.simpleflow.test.flow.param.ParamOne;
 import com.hunk.simpleflow.test.flow.param.ParamTwo;
 import com.hunk.simpleflow.test.flow.param.TestResp;
 import com.hunk.simpleflow.test.flow.param.TestTwoResp;
+
+import jakarta.annotation.Resource;
+
 import org.junit.Test;
 
-import javax.annotation.Resource;
 
 /**
  * Created on 2023/4/27.
@@ -21,7 +22,8 @@ import javax.annotation.Resource;
  */
 public class FlowExecutorTest extends BaseServiceTest {
 
-    @Resource SimpleFlowExecutor flowExecutor;
+    @Resource
+    SimpleFlowExecutor flowExecutor;
 
     @Test
     public void flow() {

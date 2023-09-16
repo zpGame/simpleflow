@@ -1,10 +1,10 @@
 package com.hunk.simpleflow.event.guava;
 
+
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
-
-import javax.annotation.Resource;
 
 /**
  * Created on 2023/5/19.
@@ -15,14 +15,15 @@ import javax.annotation.Resource;
 public abstract class EventSupportListen<E extends CustomEvent>
         implements CustomEventListen<E>, InitializingBean {
 
-    @Resource private CustomEventBus eventBus;
+    @Autowired
+    private CustomEventBus eventBus;
 
     protected Map<String, Object> publish(E event) {
-        return this.eventBus.publish(event);
+        return eventBus.publish(event);
     }
 
     @Override
     public void afterPropertiesSet() {
-        this.eventBus.register(this);
+        eventBus.register(this);
     }
 }
